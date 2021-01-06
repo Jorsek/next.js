@@ -1,10 +1,10 @@
-import findUp from 'next/dist/compiled/find-up'
+import findUp from '@ornery/next.js/dist/compiled/find-up'
 import { promises } from 'fs'
 import path from 'path'
-import resolve from 'next/dist/compiled/resolve/index.js'
+import resolve from '@ornery/next.js/dist/compiled/resolve/index.js'
 import { execOnce } from '../../next-server/lib/utils'
 
-const { version } = require('next/package.json')
+const { version } = require('@ornery/next.js/package.json')
 
 export type PluginMetaData = {
   requiredEnv: string[]

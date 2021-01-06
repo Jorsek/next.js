@@ -23,7 +23,7 @@
       "runtimeArgs": ["run", "debug", "build", "test/integration/basic"],
       "skipFiles": ["<node_internals>/**"],
       "port": 9229,
-      "outFiles": ["${workspaceFolder}/packages/next/dist/**/*"]
+      "outFiles": ["${workspaceFolder}/packages/@ornery/next.js/dist/**/*"]
     },
     {
       "name": "Launch app production",
@@ -41,7 +41,7 @@
       "name": "Attach to existing debugger",
       "port": 9229,
       "skipFiles": ["<node_internals>/**"],
-      "outFiles": ["${workspaceFolder}/packages/next/dist/**/*"]
+      "outFiles": ["${workspaceFolder}/packages/@ornery/next.js/dist/**/*"]
     }
   ]
 }

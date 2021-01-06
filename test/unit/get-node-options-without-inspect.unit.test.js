@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { getNodeOptionsWithoutInspect } from 'next/dist/server/lib/utils'
+import { getNodeOptionsWithoutInspect } from '@ornery/next.js/dist/server/lib/utils'
 
 const originalNodeOptions = process.env.NODE_OPTIONS
 

@@ -5,7 +5,7 @@ const recursiveCopyNpm = require('recursive-copy')
 
 const {
   recursiveCopy: recursiveCopyCustom,
-} = require('next/dist/lib/recursive-copy')
+} = require('@ornery/next.js/dist/lib/recursive-copy')
 
 const fixturesDir = join(__dirname, 'fixtures')
 const srcDir = join(fixturesDir, 'src')

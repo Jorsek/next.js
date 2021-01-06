@@ -1,4 +1,4 @@
 {
-  "presets": ["next/babel", "@babel/preset-flow"],
+  "presets": ["@ornery/next.js/babel", "@babel/preset-flow"],
   "plugins": [["transform-define", { "TEST_VAR": "hello" }]]
 }

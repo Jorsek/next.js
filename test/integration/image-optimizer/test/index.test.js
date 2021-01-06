@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import fs from 'fs-extra'
 import { join } from 'path'
-import isAnimated from 'next/dist/compiled/is-animated'
+import isAnimated from '@ornery/next.js/dist/compiled/is-animated'
 import {
   killApp,
   findPort,

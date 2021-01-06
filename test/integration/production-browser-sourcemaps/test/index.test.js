@@ -2,7 +2,7 @@
 import fs from 'fs-extra'
 import { join } from 'path'
 import { nextBuild, getPageFileFromBuildManifest } from 'next-test-utils'
-import { recursiveReadDir } from 'next/dist/lib/recursive-readdir'
+import { recursiveReadDir } from '@ornery/next.js/dist/lib/recursive-readdir'
 
 jest.setTimeout(1000 * 60 * 2)
 

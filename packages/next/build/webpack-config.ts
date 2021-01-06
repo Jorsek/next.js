@@ -1,9 +1,9 @@
-import { codeFrameColumns } from 'next/dist/compiled/babel/code-frame'
+import { codeFrameColumns } from '@ornery/next.js/dist/compiled/babel/code-frame'
 import ReactRefreshWebpackPlugin from '@next/react-refresh-utils/ReactRefreshWebpackPlugin'
 import crypto from 'crypto'
 import { readFileSync, realpathSync } from 'fs'
 import chalk from 'chalk'
-import semver from 'next/dist/compiled/semver'
+import semver from '@ornery/next.js/dist/compiled/semver'
 // @ts-ignore No typings yet
 import TerserPlugin from './webpack/plugins/terser-webpack-plugin/src/index.js'
 import path from 'path'
@@ -81,7 +81,7 @@ const devtoolRevertWarning = execOnce((devtool: Configuration['devtool']) => {
 })
 
 function parseJsonFile(filePath: string) {
-  const JSON5 = require('next/dist/compiled/json5')
+  const JSON5 = require('@ornery/next.js/dist/compiled/json5')
   const contents = readFileSync(filePath, 'utf8')
 
   // Special case an empty file
@@ -343,7 +343,7 @@ export default async function getBaseWebpackConfig(
   }
 
   const clientResolveRewrites = require.resolve(
-    'next/dist/next-server/lib/router/utils/resolve-rewrites'
+    '@ornery/next.js/dist/next-server/lib/router/utils/resolve-rewrites'
   )
 
   const resolveConfig = {
@@ -386,7 +386,7 @@ export default async function getBaseWebpackConfig(
       ...getReactProfilingInProduction(),
       [clientResolveRewrites]: hasRewrites
         ? clientResolveRewrites
-        : require.resolve('next/dist/client/dev/noop.js'),
+        : require.resolve('@ornery/next.js/dist/client/dev/noop.js'),
     },
     mainFields: isServer ? ['main', 'module'] : ['browser', 'module', 'main'],
     plugins: isWebpack5
@@ -883,7 +883,7 @@ export default async function getBaseWebpackConfig(
                 // Move Babel transpilation into a thread pool (2 workers, unlimited batch size).
                 // Applying a cache to the off-thread work avoids paying transfer costs for unchanged modules.
                 {
-                  loader: 'next/dist/compiled/cache-loader',
+                  loader: '@ornery/next.js/dist/compiled/cache-loader',
                   options: {
                     cacheContext: dir,
                     cacheDirectory: path.join(dir, '.next', 'cache', 'webpack'),
@@ -891,7 +891,9 @@ export default async function getBaseWebpackConfig(
                   },
                 },
                 {
-                  loader: require.resolve('next/dist/compiled/thread-loader'),
+                  loader: require.resolve(
+                    '@ornery/next.js/dist/compiled/thread-loader'
+                  ),
                   options: {
                     workers: 2,
                     workerParallelJobs: Infinity,

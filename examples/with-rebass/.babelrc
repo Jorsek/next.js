@@ -1,5 +1,5 @@
 {
-  "presets": ["next/babel"],
+  "presets": ["@ornery/next.js/babel"],
   "plugins": [
     [
       "styled-components",

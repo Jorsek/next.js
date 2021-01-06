@@ -1,4 +1,4 @@
 {
-  "presets": ["next/babel"],
+  "presets": ["@ornery/next.js/babel"],
   "plugins": ["@babel/plugin-proposal-do-expressions"]
 }

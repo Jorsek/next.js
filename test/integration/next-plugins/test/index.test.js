@@ -4,7 +4,7 @@ import fs from 'fs-extra'
 import { join } from 'path'
 import cheerio from 'cheerio'
 import webdriver from 'next-webdriver'
-import { version } from 'next/package.json'
+import { version } from '@ornery/next.js/package.json'
 import {
   findPort,
   launchApp,

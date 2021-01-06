@@ -6,7 +6,7 @@ import sources from 'webpack-sources'
 import pLimit from 'p-limit'
 import jestWorker from 'jest-worker'
 import crypto from 'crypto'
-import cacache from 'next/dist/compiled/cacache'
+import cacache from '@ornery/next.js/dist/compiled/cacache'
 import { tracer, traceAsyncFn } from '../../../../tracer'
 
 const isWebpack5 = parseInt(webpack.version) === 5

@@ -1,6 +1,6 @@
 import { IncomingMessage, ServerResponse } from 'http'
-import { parse } from 'next/dist/compiled/content-type'
-import { CookieSerializeOptions } from 'next/dist/compiled/cookie'
+import { parse } from '@ornery/next.js/dist/compiled/content-type'
+import { CookieSerializeOptions } from '@ornery/next.js/dist/compiled/cookie'
 import getRawBody from 'raw-body'
 import { PageConfig } from 'next/types'
 import { Stream } from 'stream'
@@ -174,7 +174,9 @@ export function getCookieParser(req: IncomingMessage) {
       return {}
     }
 
-    const { parse: parseCookieFn } = require('next/dist/compiled/cookie')
+    const {
+      parse: parseCookieFn,
+    } = require('@ornery/next.js/dist/compiled/cookie')
     return parseCookieFn(Array.isArray(header) ? header.join(';') : header)
   }
 }
@@ -328,7 +330,7 @@ export function tryGetPreviewData(
 
   const tokenPreviewData = cookies[COOKIE_NAME_PRERENDER_DATA]
 
-  const jsonwebtoken = require('next/dist/compiled/jsonwebtoken') as typeof import('jsonwebtoken')
+  const jsonwebtoken = require('@ornery/next.js/dist/compiled/jsonwebtoken') as typeof import('jsonwebtoken')
   let encryptedPreviewData: {
     data: string
   }
@@ -388,7 +390,7 @@ function setPreviewData<T>(
     throw new Error('invariant: invalid previewModeSigningKey')
   }
 
-  const jsonwebtoken = require('next/dist/compiled/jsonwebtoken') as typeof import('jsonwebtoken')
+  const jsonwebtoken = require('@ornery/next.js/dist/compiled/jsonwebtoken') as typeof import('jsonwebtoken')
 
   const payload = jsonwebtoken.sign(
     {
@@ -416,7 +418,7 @@ function setPreviewData<T>(
 
   const {
     serialize,
-  } = require('next/dist/compiled/cookie') as typeof import('cookie')
+  } = require('@ornery/next.js/dist/compiled/cookie') as typeof import('cookie')
   const previous = res.getHeader('Set-Cookie')
   res.setHeader(`Set-Cookie`, [
     ...(typeof previous === 'string'
@@ -453,7 +455,7 @@ function clearPreviewData<T>(res: NextApiResponse<T>): NextApiResponse<T> {
 
   const {
     serialize,
-  } = require('next/dist/compiled/cookie') as typeof import('cookie')
+  } = require('@ornery/next.js/dist/compiled/cookie') as typeof import('cookie')
   const previous = res.getHeader('Set-Cookie')
   res.setHeader(`Set-Cookie`, [
     ...(typeof previous === 'string'

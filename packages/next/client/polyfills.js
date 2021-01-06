@@ -1,1 +1,1 @@
-import 'next/dist/build/polyfills/polyfill-nomodule'
+import '@ornery/next.js/dist/build/polyfills/polyfill-nomodule'

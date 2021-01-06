@@ -6,8 +6,8 @@ import http from 'http'
 // `next` here is the symlink in `test/node_modules/next` which points to the root directory.
 // This is done so that requiring from `next` works.
 // The reason we don't import the relative path `../../dist/<etc>` is that it would lead to inconsistent module singletons
-import server from 'next/dist/server/next'
-import _pkg from 'next/package.json'
+import server from '@ornery/next.js/dist/server/next'
+import _pkg from '@ornery/next.js/package.json'
 import fetch from 'node-fetch'
 import path from 'path'
 import qs from 'querystring'

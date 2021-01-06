@@ -47,7 +47,7 @@ const getStdout = (cmd) => {
 
 async function useLocalNextjs() {
   // installed nextjs
-  const nextPath = path.dirname(require.resolve('next/package.json'))
+  const nextPath = path.dirname(require.resolve('@ornery/next.js/package.json'))
 
   // repository root
   const root = path.dirname(

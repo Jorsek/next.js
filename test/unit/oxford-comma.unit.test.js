@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { getOxfordCommaList } from 'next/dist/lib/oxford-comma-list'
+import { getOxfordCommaList } from '@ornery/next.js/dist/lib/oxford-comma-list'
 
 describe('oxford-comma-list', () => {
   test('empty array', () => {

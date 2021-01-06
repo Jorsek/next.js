@@ -1,5 +1,5 @@
-import isWslBoolean from 'next/dist/compiled/is-wsl'
-import curry from 'next/dist/compiled/lodash.curry'
+import isWslBoolean from '@ornery/next.js/dist/compiled/is-wsl'
+import curry from '@ornery/next.js/dist/compiled/lodash.curry'
 import { Configuration } from 'webpack'
 import { ConfigurationContext } from '../utils'
 

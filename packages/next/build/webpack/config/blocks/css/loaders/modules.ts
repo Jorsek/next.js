@@ -54,7 +54,7 @@ export function getCssModuleLoader(
 
   // Compile CSS
   loaders.push({
-    loader: require.resolve('next/dist/compiled/postcss-loader'),
+    loader: require.resolve('@ornery/next.js/dist/compiled/postcss-loader'),
     options: {
       postcssOptions: { plugins: postCssPlugins, config: false },
       sourceMap: true,

@@ -12,7 +12,7 @@ import { join } from 'path'
 import {
   GSP_NO_RETURNED_VALUE,
   GSSP_NO_RETURNED_VALUE,
-} from '../../../../packages/next/dist/lib/constants'
+} from '../../../../packages/@ornery/next.js/dist/lib/constants'
 jest.setTimeout(1000 * 60 * 2)
 
 const appDir = join(__dirname, '..')

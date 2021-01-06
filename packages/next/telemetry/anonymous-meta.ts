@@ -1,5 +1,5 @@
-import isDockerFunction from 'next/dist/compiled/is-docker'
-import isWslBoolean from 'next/dist/compiled/is-wsl'
+import isDockerFunction from '@ornery/next.js/dist/compiled/is-docker'
+import isWslBoolean from '@ornery/next.js/dist/compiled/is-wsl'
 import os from 'os'
 
 import * as ciEnvironment from './ci-info'

@@ -1,5 +1,5 @@
 import cssnanoSimple from 'cssnano-simple'
-import postcssScss from 'next/dist/compiled/postcss-scss'
+import postcssScss from '@ornery/next.js/dist/compiled/postcss-scss'
 import postcss, { Parser } from 'postcss'
 import webpack from 'webpack'
 import sources from 'webpack-sources'

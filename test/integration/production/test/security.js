@@ -9,7 +9,7 @@ import {
   waitFor,
   fetchViaHTTP,
 } from 'next-test-utils'
-import { recursiveReadDir } from 'next/dist/lib/recursive-readdir'
+import { recursiveReadDir } from '@ornery/next.js/dist/lib/recursive-readdir'
 import { homedir } from 'os'
 
 // Does the same evaluation checking for INJECTED for 5 seconds after hydration, triggering every 500ms

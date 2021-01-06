@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { resolve } from 'path'
-import arg from 'next/dist/compiled/arg/index.js'
+import arg from '@ornery/next.js/dist/compiled/arg/index.js'
 import { existsSync } from 'fs'
 import startServer from '../server/lib/start-server'
 import { printAndExit } from '../server/lib/utils'
@@ -58,7 +58,7 @@ const nextDev: cliCommand = (argv) => {
 
   async function preflight() {
     const { getPackageVersion } = await import('../lib/get-package-version')
-    const semver = await import('next/dist/compiled/semver').then(
+    const semver = await import('@ornery/next.js/dist/compiled/semver').then(
       (res) => res.default
     )
 
@@ -123,7 +123,7 @@ const nextDev: cliCommand = (argv) => {
     .catch((err) => {
       if (err.code === 'EADDRINUSE') {
         let errorMessage = `Port ${port} is already in use.`
-        const pkgAppPath = require('next/dist/compiled/find-up').sync(
+        const pkgAppPath = require('@ornery/next.js/dist/compiled/find-up').sync(
           'package.json',
           {
             cwd: dir,

@@ -1,5 +1,5 @@
 // @ts-nocheck
-import terser from 'next/dist/compiled/terser'
+import terser from '@ornery/next.js/dist/compiled/terser'
 
 function buildTerserOptions(terserOptions = {}) {
   return {

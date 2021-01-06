@@ -8,7 +8,7 @@ import Server from './next-server'
 import { getContentType, getExtension } from './serve-static'
 import { fileExists } from '../../lib/file-exists'
 // @ts-ignore no types for is-animated
-import isAnimated from 'next/dist/compiled/is-animated'
+import isAnimated from '@ornery/next.js/dist/compiled/is-animated'
 import Stream from 'stream'
 import { sendEtagResponse } from './send-payload'
 import { ImageConfig, imageConfigDefault } from './image-config'

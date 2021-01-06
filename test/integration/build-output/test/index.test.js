@@ -4,7 +4,7 @@ import 'flat-map-polyfill'
 import { remove } from 'fs-extra'
 import { nextBuild } from 'next-test-utils'
 import { join } from 'path'
-import { recursiveReadDir } from 'next/dist/lib/recursive-readdir'
+import { recursiveReadDir } from '@ornery/next.js/dist/lib/recursive-readdir'
 
 jest.setTimeout(1000 * 60 * 2)
 

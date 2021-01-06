@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import { recursiveCopy } from 'next/dist/lib/recursive-copy'
+import { recursiveCopy } from '@ornery/next.js/dist/lib/recursive-copy'
 import { join } from 'path'
 import fs from 'fs-extra'
 import { readFileSync } from 'fs'

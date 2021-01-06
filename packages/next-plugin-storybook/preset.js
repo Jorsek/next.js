@@ -1,7 +1,9 @@
 const { PHASE_PRODUCTION_BUILD } = require('next/constants')
-const { findPagesDir } = require('next/dist/lib/find-pages-dir')
-const loadConfig = require('next/dist/next-server/server/config').default
-const getWebpackConfig = require('next/dist/build/webpack-config').default
+const { findPagesDir } = require('@ornery/next.js/dist/lib/find-pages-dir')
+const loadConfig = require('@ornery/next.js/dist/next-server/server/config')
+  .default
+const getWebpackConfig = require('@ornery/next.js/dist/build/webpack-config')
+  .default
 
 const CWD = process.cwd()
 
@@ -48,7 +50,7 @@ async function webpackFinal(config) {
       // relative with storybook's config
       if (rule.use && rule.use.loader === 'next-babel-loader') {
         rule.use.loader = require.resolve(
-          'next/dist/build/webpack/loaders/next-babel-loader'
+          '@ornery/next.js/dist/build/webpack/loaders/next-babel-loader'
         )
       }
       return rule

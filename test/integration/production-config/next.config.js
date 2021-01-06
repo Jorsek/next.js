@@ -27,7 +27,7 @@ module.exports = withCSS(
     webpack(config) {
       // When next-css is `npm link`ed we have to solve loaders from the project root
       const nextLocation = path.join(
-        require.resolve('next/package.json'),
+        require.resolve('@ornery/next.js/package.json'),
         '../'
       )
       const nextCssNodeModulesLocation = path.join(

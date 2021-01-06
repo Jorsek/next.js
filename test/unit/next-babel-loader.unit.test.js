@@ -4,7 +4,7 @@ function interopRequireDefault(mod) {
 }
 
 const loader = interopRequireDefault(
-  require('next/dist/build/webpack/loaders/next-babel-loader')
+  require('@ornery/next.js/dist/build/webpack/loaders/next-babel-loader')
 )
 const os = require('os')
 const path = require('path')

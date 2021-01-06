@@ -1,8 +1,8 @@
-import compression from 'next/dist/compiled/compression'
+import compression from '@ornery/next.js/dist/compiled/compression'
 import fs from 'fs'
 import chalk from 'chalk'
 import { IncomingMessage, ServerResponse } from 'http'
-import Proxy from 'next/dist/compiled/http-proxy'
+import Proxy from '@ornery/next.js/dist/compiled/http-proxy'
 import { join, relative, resolve, sep } from 'path'
 import {
   parse as parseQs,
@@ -88,7 +88,7 @@ import { detectLocaleCookie } from '../lib/i18n/detect-locale-cookie'
 import * as Log from '../../build/output/log'
 import { imageOptimizer } from './image-optimizer'
 import { detectDomainLocale } from '../lib/i18n/detect-domain-locale'
-import cookie from 'next/dist/compiled/cookie'
+import cookie from '@ornery/next.js/dist/compiled/cookie'
 import escapePathDelimiters from '../lib/router/utils/escape-path-delimiters'
 import { getUtils } from '../../build/webpack/loaders/next-serverless-loader/utils'
 

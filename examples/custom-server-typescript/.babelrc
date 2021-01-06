@@ -1,13 +1,13 @@
 {
   "env": {
     "development": {
-      "presets": ["next/babel"]
+      "presets": ["@ornery/next.js/babel"]
     },
     "production": {
-      "presets": ["next/babel"]
+      "presets": ["@ornery/next.js/babel"]
     },
     "test": {
-      "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }]]
+      "presets": [["@ornery/next.js/babel", { "preset-env": { "modules": "commonjs" } }]]
     }
   }
 }

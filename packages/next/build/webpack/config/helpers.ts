@@ -1,4 +1,4 @@
-import curry from 'next/dist/compiled/lodash.curry'
+import curry from '@ornery/next.js/dist/compiled/lodash.curry'
 import { Configuration, Plugin, RuleSetRule } from 'webpack'
 
 export const loader = curry(function loader(

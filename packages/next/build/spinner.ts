@@ -1,4 +1,4 @@
-import ora from 'next/dist/compiled/ora'
+import ora from '@ornery/next.js/dist/compiled/ora'
 
 const dotsSpinner = {
   frames: ['.', '..', '...'],

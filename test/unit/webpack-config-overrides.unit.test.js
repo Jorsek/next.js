@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { attachReactRefresh } from 'next/dist/build/webpack-config'
+import { attachReactRefresh } from '@ornery/next.js/dist/build/webpack-config'
 
 describe('webpack-config attachReactRefresh', () => {
   it('should skip adding when unrelated', () => {

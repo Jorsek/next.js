@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { loadGetInitialProps } from 'next/dist/next-server/lib/utils'
+import { loadGetInitialProps } from '@ornery/next.js/dist/next-server/lib/utils'
 
 describe('loadGetInitialProps', () => {
   it('should throw if getInitialProps is defined as an instance method', () => {

@@ -11,37 +11,37 @@ description: Extend the babel preset added by Next.js with your own configs.
   </ul>
 </details>
 
-Next.js includes the `next/babel` preset to your app, which includes everything needed to compile React applications and server-side code. But if you want to extend the default Babel configs, it's also possible.
+Next.js includes the `@ornery/next.js/babel` preset to your app, which includes everything needed to compile React applications and server-side code. But if you want to extend the default Babel configs, it's also possible.
 
-To start, you only need to define a `.babelrc` file at the top of your app. If such a file is found, it will be considered as the _source of truth_, and therefore it needs to define what Next.js needs as well, which is the `next/babel` preset.
+To start, you only need to define a `.babelrc` file at the top of your app. If such a file is found, it will be considered as the _source of truth_, and therefore it needs to define what Next.js needs as well, which is the `@ornery/next.js/babel` preset.
 
 Here's an example `.babelrc` file:
 
 ```json
 {
-  "presets": ["next/babel"],
+  "presets": ["@ornery/next.js/babel"],
   "plugins": []
 }
 ```
 
-You can [take a look at this file](https://github.com/vercel/next.js/blob/canary/packages/next/build/babel/preset.ts) to learn about the presets included by `next/babel`.
+You can [take a look at this file](https://github.com/vercel/next.js/blob/canary/packages/next/build/babel/preset.ts) to learn about the presets included by `@ornery/next.js/babel`.
 
 To add presets/plugins **without configuring them**, you can do it this way:
 
 ```json
 {
-  "presets": ["next/babel"],
+  "presets": ["@ornery/next.js/babel"],
   "plugins": ["@babel/plugin-proposal-do-expressions"]
 }
 ```
 
-To add presets/plugins **with custom configuration**, do it on the `next/babel` preset like so:
+To add presets/plugins **with custom configuration**, do it on the `@ornery/next.js/babel` preset like so:
 
 ```json
 {
   "presets": [
     [
-      "next/babel",
+      "@ornery/next.js/babel",
       {
         "preset-env": {},
         "transform-runtime": {},

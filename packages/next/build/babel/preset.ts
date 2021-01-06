@@ -1,4 +1,4 @@
-import { PluginItem } from 'next/dist/compiled/babel/core'
+import { PluginItem } from '@ornery/next.js/dist/compiled/babel/core'
 import { dirname } from 'path'
 
 const isLoadIntentTest = process.env.NODE_ENV === 'test'
@@ -123,11 +123,11 @@ module.exports = (
     sourceType: 'unambiguous',
     presets: [
       customModernPreset || [
-        require('next/dist/compiled/babel/preset-env'),
+        require('@ornery/next.js/dist/compiled/babel/preset-env'),
         presetEnvConfig,
       ],
       [
-        require('next/dist/compiled/babel/preset-react'),
+        require('@ornery/next.js/dist/compiled/babel/preset-react'),
         {
           // This adds @babel/plugin-transform-react-jsx-source and
           // @babel/plugin-transform-react-jsx-self automatically in development
@@ -137,7 +137,7 @@ module.exports = (
         },
       ],
       [
-        require('next/dist/compiled/babel/preset-typescript'),
+        require('@ornery/next.js/dist/compiled/babel/preset-typescript'),
         { allowNamespaces: true, ...options['preset-typescript'] },
       ],
     ],
@@ -161,20 +161,20 @@ module.exports = (
           lib: true,
         },
       ],
-      require('next/dist/compiled/babel/plugin-syntax-dynamic-import'),
+      require('@ornery/next.js/dist/compiled/babel/plugin-syntax-dynamic-import'),
       require('./plugins/react-loadable-plugin'),
       [
-        require('next/dist/compiled/babel/plugin-proposal-class-properties'),
+        require('@ornery/next.js/dist/compiled/babel/plugin-proposal-class-properties'),
         options['class-properties'] || {},
       ],
       [
-        require('next/dist/compiled/babel/plugin-proposal-object-rest-spread'),
+        require('@ornery/next.js/dist/compiled/babel/plugin-proposal-object-rest-spread'),
         {
           useBuiltIns: true,
         },
       ],
       !isServer && [
-        require('next/dist/compiled/babel/plugin-transform-runtime'),
+        require('@ornery/next.js/dist/compiled/babel/plugin-transform-runtime'),
         {
           corejs: false,
           helpers: true,
@@ -199,11 +199,12 @@ module.exports = (
           removeImport: true,
         },
       ],
-      isServer && require('next/dist/compiled/babel/plugin-syntax-bigint'),
+      isServer &&
+        require('@ornery/next.js/dist/compiled/babel/plugin-syntax-bigint'),
       // Always compile numeric separator because the resulting number is
       // smaller.
-      require('next/dist/compiled/babel/plugin-proposal-numeric-separator'),
-      require('next/dist/compiled/babel/plugin-proposal-export-namespace-from'),
+      require('@ornery/next.js/dist/compiled/babel/plugin-proposal-numeric-separator'),
+      require('@ornery/next.js/dist/compiled/babel/plugin-proposal-export-namespace-from'),
     ].filter(Boolean),
   }
 }

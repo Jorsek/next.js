@@ -3,7 +3,7 @@ console.log('hello from babel!')
 module.exports = {
   presets: [
     [
-      'next/babel',
+      '@ornery/next.js/babel',
       {
         'styled-jsx': {
           plugins: [require.resolve('styled-jsx-plugin-postcss')],

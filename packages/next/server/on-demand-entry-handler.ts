@@ -151,7 +151,7 @@ export default function onDemandEntryHandler(
 
       // Default the /_error route to the Next.js provided default page
       if (page === '/_error' && pagePath === null) {
-        pagePath = 'next/dist/pages/_error'
+        pagePath = '@ornery/next.js/dist/pages/_error'
       }
 
       if (pagePath === null) {
@@ -169,7 +169,7 @@ export default function onDemandEntryHandler(
       const bundleFile = normalizePagePath(pageUrl)
       const serverBundlePath = posix.join('pages', bundleFile)
       const clientBundlePath = posix.join('pages', bundleFile)
-      const absolutePagePath = pagePath.startsWith('next/dist/pages')
+      const absolutePagePath = pagePath.startsWith('@ornery/next.js/dist/pages')
         ? require.resolve(pagePath)
         : join(pagesDir, pagePath)
 

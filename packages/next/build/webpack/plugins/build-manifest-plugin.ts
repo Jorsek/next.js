@@ -1,4 +1,4 @@
-import devalue from 'next/dist/compiled/devalue'
+import devalue from '@ornery/next.js/dist/compiled/devalue'
 import webpack, { Compiler, compilation as CompilationType } from 'webpack'
 import sources from 'webpack-sources'
 import {

@@ -1,5 +1,5 @@
 import chalk from 'chalk'
-import findUp from 'next/dist/compiled/find-up'
+import findUp from '@ornery/next.js/dist/compiled/find-up'
 import {
   promises,
   existsSync,

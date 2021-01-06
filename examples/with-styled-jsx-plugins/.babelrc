@@ -1,7 +1,7 @@
 {
   "presets": [
     [
-      "next/babel",
+      "@ornery/next.js/babel",
       {
         "styled-jsx": {
           "plugins": ["styled-jsx-plugin-postcss"]

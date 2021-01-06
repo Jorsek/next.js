@@ -1,4 +1,4 @@
-import retry from 'next/dist/compiled/async-retry'
+import retry from '@ornery/next.js/dist/compiled/async-retry'
 import fetch from 'node-fetch'
 
 export function _postPayload(endpoint: string, body: object) {

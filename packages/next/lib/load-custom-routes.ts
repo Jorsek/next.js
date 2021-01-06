@@ -1,7 +1,7 @@
 import { parse as parseUrl } from 'url'
 import { NextConfig } from '../next-server/server/config'
-import * as pathToRegexp from 'next/dist/compiled/path-to-regexp'
-import escapeStringRegexp from 'next/dist/compiled/escape-string-regexp'
+import * as pathToRegexp from '@ornery/next.js/dist/compiled/path-to-regexp'
+import escapeStringRegexp from '@ornery/next.js/dist/compiled/escape-string-regexp'
 import {
   PERMANENT_REDIRECT_STATUS,
   TEMPORARY_REDIRECT_STATUS,

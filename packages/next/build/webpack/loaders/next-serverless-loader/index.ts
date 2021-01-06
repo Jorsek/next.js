@@ -1,5 +1,5 @@
-import devalue from 'next/dist/compiled/devalue'
-import escapeRegexp from 'next/dist/compiled/escape-string-regexp'
+import devalue from '@ornery/next.js/dist/compiled/devalue'
+import escapeRegexp from '@ornery/next.js/dist/compiled/escape-string-regexp'
 import { join } from 'path'
 import { parse } from 'querystring'
 import { loader } from 'webpack'
@@ -101,10 +101,10 @@ const nextServerlessLoader: loader.Loader = function () {
         }
         import initServer from 'next-plugin-loader?middleware=on-init-server!'
         import onError from 'next-plugin-loader?middleware=on-error-server!'
-        import 'next/dist/next-server/server/node-polyfill-fetch'
+        import '@ornery/next.js/dist/next-server/server/node-polyfill-fetch'
         import routesManifest from '${routesManifest}'
   
-        import { getApiHandler } from 'next/dist/build/webpack/loaders/next-serverless-loader/api-handler'
+        import { getApiHandler } from '@ornery/next.js/dist/build/webpack/loaders/next-serverless-loader/api-handler'
   
         const apiHandler = getApiHandler({
           pageModule: require("${absolutePagePath}"),
@@ -125,7 +125,7 @@ const nextServerlessLoader: loader.Loader = function () {
       return `
       import initServer from 'next-plugin-loader?middleware=on-init-server!'
       import onError from 'next-plugin-loader?middleware=on-error-server!'
-      import 'next/dist/next-server/server/node-polyfill-fetch'
+      import '@ornery/next.js/dist/next-server/server/node-polyfill-fetch'
       import routesManifest from '${routesManifest}'
       import buildManifest from '${buildManifest}'
       import reactLoadableManifest from '${reactLoadableManifest}'
@@ -136,7 +136,7 @@ const nextServerlessLoader: loader.Loader = function () {
         // this needs to be called first so its available for any other imports
         runtimeConfigSetter
       }
-      import { getPageHandler } from 'next/dist/build/webpack/loaders/next-serverless-loader/page-handler'
+      import { getPageHandler } from '@ornery/next.js/dist/build/webpack/loaders/next-serverless-loader/page-handler'
   
       const appMod = require('${absoluteAppPath}')
       let App = appMod.default || appMod.then && appMod.then(mod => mod.default);

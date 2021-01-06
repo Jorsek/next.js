@@ -18,7 +18,7 @@ const babelClientOpts = {
         },
         bugfixes: true,
         loose: true,
-        // This is handled by the Next.js webpack config that will run next/babel over the same code.
+        // This is handled by the Next.js webpack config that will run @ornery/next.js/babel over the same code.
         exclude: [
           'transform-typeof-symbol',
           'transform-async-to-generator',
@@ -55,7 +55,7 @@ const babelServerOpts = {
           node: '8.3',
         },
         loose: true,
-        // This is handled by the Next.js webpack config that will run next/babel over the same code.
+        // This is handled by the Next.js webpack config that will run @ornery/next.js/babel over the same code.
         exclude: [
           'transform-typeof-symbol',
           'transform-async-to-generator',

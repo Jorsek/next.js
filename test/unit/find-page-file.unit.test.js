@@ -1,6 +1,6 @@
 /* eslint-env jest */
-import { findPageFile } from 'next/dist/server/lib/find-page-file'
-import { normalizePagePath } from 'next/dist/next-server/server/normalize-page-path'
+import { findPageFile } from '@ornery/next.js/dist/server/lib/find-page-file'
+import { normalizePagePath } from '@ornery/next.js/dist/next-server/server/normalize-page-path'
 
 import { join } from 'path'
 

@@ -45,9 +45,10 @@ export function createPagesMapping(
     {}
   )
 
-  pages['/_app'] = pages['/_app'] || 'next/dist/pages/_app'
-  pages['/_error'] = pages['/_error'] || 'next/dist/pages/_error'
-  pages['/_document'] = pages['/_document'] || 'next/dist/pages/_document'
+  pages['/_app'] = pages['/_app'] || '@ornery/next.js/dist/pages/_app'
+  pages['/_error'] = pages['/_error'] || '@ornery/next.js/dist/pages/_error'
+  pages['/_document'] =
+    pages['/_document'] || '@ornery/next.js/dist/pages/_document'
 
   return pages
 }

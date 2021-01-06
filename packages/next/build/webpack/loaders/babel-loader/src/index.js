@@ -1,11 +1,11 @@
-// import babel from 'next/dist/compiled/babel/core'
+// import babel from '@ornery/next.js/dist/compiled/babel/core'
 import loaderUtils from 'loader-utils'
 import { tracer, traceAsyncFn, traceFn } from '../../../../tracer'
 import cache from './cache'
 import transform from './transform'
 
 // When using `import` Babel will be undefined
-const babel = require('next/dist/compiled/babel/core')
+const babel = require('@ornery/next.js/dist/compiled/babel/core')
 
 export default function makeLoader(callback) {
   const overrides = callback(babel)

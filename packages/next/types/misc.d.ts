@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
-declare module 'next/dist/compiled/babel/plugin-transform-modules-commonjs'
-declare module 'next/dist/compiled/babel/plugin-syntax-jsx'
+declare module '@ornery/next.js/dist/compiled/babel/plugin-transform-modules-commonjs'
+declare module '@ornery/next.js/dist/compiled/babel/plugin-syntax-jsx'
 declare module 'browserslist'
 declare module 'cssnano-simple' {
   import { OldPlugin } from 'postcss'
@@ -12,16 +12,16 @@ declare module 'webpack/lib/GraphHelpers'
 declare module 'webpack/lib/DynamicEntryPlugin'
 declare module 'webpack/lib/Entrypoint'
 
-declare module 'next/dist/compiled/amphtml-validator' {
+declare module '@ornery/next.js/dist/compiled/amphtml-validator' {
   import m from 'amphtml-validator'
   export = m
 }
-declare module 'next/dist/compiled/async-retry'
-declare module 'next/dist/compiled/async-sema' {
+declare module '@ornery/next.js/dist/compiled/async-retry'
+declare module '@ornery/next.js/dist/compiled/async-sema' {
   import m from 'async-sema'
   export = m
 }
-declare module 'next/dist/compiled/arg/index.js' {
+declare module '@ornery/next.js/dist/compiled/arg/index.js' {
   function arg<T extends arg.Spec>(
     spec: T,
     options?: { argv?: string[]; permissive?: boolean }
@@ -48,136 +48,136 @@ declare module 'next/dist/compiled/arg/index.js' {
   export = arg
 }
 
-declare module 'next/dist/compiled/babel/code-frame' {
+declare module '@ornery/next.js/dist/compiled/babel/code-frame' {
   export * from '@babel/code-frame'
 }
-declare module 'next/dist/compiled/babel/preset-env' {
+declare module '@ornery/next.js/dist/compiled/babel/preset-env' {
   export default any
 }
-declare module 'next/dist/compiled/babel/core' {
+declare module '@ornery/next.js/dist/compiled/babel/core' {
   export * from '@babel/core'
 }
-declare module 'next/dist/compiled/ci-info' {
+declare module '@ornery/next.js/dist/compiled/ci-info' {
   import m from 'ci-info'
   export = m
 }
-declare module 'next/dist/compiled/compression' {
+declare module '@ornery/next.js/dist/compiled/compression' {
   import m from 'compression'
   export = m
 }
-declare module 'next/dist/compiled/conf' {
+declare module '@ornery/next.js/dist/compiled/conf' {
   import m from 'conf'
   export = m
 }
-declare module 'next/dist/compiled/content-type' {
+declare module '@ornery/next.js/dist/compiled/content-type' {
   import m from 'content-type'
   export = m
 }
-declare module 'next/dist/compiled/cookie' {
+declare module '@ornery/next.js/dist/compiled/cookie' {
   import m from 'cookie'
   export = m
 }
-declare module 'next/dist/compiled/debug' {
+declare module '@ornery/next.js/dist/compiled/debug' {
   import m from 'debug'
   export = m
 }
-declare module 'next/dist/compiled/devalue' {
+declare module '@ornery/next.js/dist/compiled/devalue' {
   import m from 'devalue'
   export = m
 }
-declare module 'next/dist/compiled/escape-string-regexp' {
+declare module '@ornery/next.js/dist/compiled/escape-string-regexp' {
   import m from 'escape-string-regexp'
   export = m
 }
-declare module 'next/dist/compiled/find-up' {
+declare module '@ornery/next.js/dist/compiled/find-up' {
   import m from 'find-up'
   export = m
 }
-declare module 'next/dist/compiled/fresh' {
+declare module '@ornery/next.js/dist/compiled/fresh' {
   import m from 'fresh'
   export = m
 }
-declare module 'next/dist/compiled/gzip-size' {
+declare module '@ornery/next.js/dist/compiled/gzip-size' {
   import m from 'gzip-size'
   export = m
 }
-declare module 'next/dist/compiled/http-proxy' {
+declare module '@ornery/next.js/dist/compiled/http-proxy' {
   import m from 'http-proxy'
   export = m
 }
-declare module 'next/dist/compiled/is-docker' {
+declare module '@ornery/next.js/dist/compiled/is-docker' {
   import m from 'is-docker'
   export = m
 }
-declare module 'next/dist/compiled/is-wsl' {
+declare module '@ornery/next.js/dist/compiled/is-wsl' {
   import m from 'is-wsl'
   export = m
 }
-declare module 'next/dist/compiled/json5' {
+declare module '@ornery/next.js/dist/compiled/json5' {
   import m from 'json5'
   export = m
 }
-declare module 'next/dist/compiled/jsonwebtoken' {
+declare module '@ornery/next.js/dist/compiled/jsonwebtoken' {
   import m from 'jsonwebtoken'
   export = m
 }
-declare module 'next/dist/compiled/lodash.curry' {
+declare module '@ornery/next.js/dist/compiled/lodash.curry' {
   import m from 'lodash.curry'
   export = m
 }
-declare module 'next/dist/compiled/lru-cache' {
+declare module '@ornery/next.js/dist/compiled/lru-cache' {
   import m from 'lru-cache'
   export = m
 }
-declare module 'next/dist/compiled/nanoid/index.cjs' {
+declare module '@ornery/next.js/dist/compiled/nanoid/index.cjs' {
   import m from 'nanoid'
   export = m
 }
-declare module 'next/dist/compiled/ora' {
+declare module '@ornery/next.js/dist/compiled/ora' {
   import m from 'ora'
   export = m
 }
-declare module 'next/dist/compiled/path-to-regexp' {
+declare module '@ornery/next.js/dist/compiled/path-to-regexp' {
   import m from 'path-to-regexp'
   export = m
 }
-declare module 'next/dist/compiled/recast' {
+declare module '@ornery/next.js/dist/compiled/recast' {
   import m from 'recast'
   export = m
 }
-declare module 'next/dist/compiled/resolve/index.js' {
+declare module '@ornery/next.js/dist/compiled/resolve/index.js' {
   import m from 'resolve'
   export = m
 }
-declare module 'next/dist/compiled/send' {
+declare module '@ornery/next.js/dist/compiled/send' {
   import m from 'send'
   export = m
 }
-declare module 'next/dist/compiled/source-map' {
+declare module '@ornery/next.js/dist/compiled/source-map' {
   import m from 'source-map'
   export = m
 }
-declare module 'next/dist/compiled/string-hash' {
+declare module '@ornery/next.js/dist/compiled/string-hash' {
   import m from 'string-hash'
   export = m
 }
-declare module 'next/dist/compiled/strip-ansi' {
+declare module '@ornery/next.js/dist/compiled/strip-ansi' {
   import m from 'strip-ansi'
   export = m
 }
-declare module 'next/dist/compiled/terser' {
+declare module '@ornery/next.js/dist/compiled/terser' {
   import m from 'terser'
   export = m
 }
-declare module 'next/dist/compiled/semver' {
+declare module '@ornery/next.js/dist/compiled/semver' {
   import m from 'semver'
   export = m
 }
-declare module 'next/dist/compiled/postcss-scss' {
+declare module '@ornery/next.js/dist/compiled/postcss-scss' {
   import m from 'postcss-scss'
   export = m
 }
-declare module 'next/dist/compiled/text-table' {
+declare module '@ornery/next.js/dist/compiled/text-table' {
   function textTable(
     rows: Array<Array<{}>>,
     opts?: {
@@ -189,16 +189,16 @@ declare module 'next/dist/compiled/text-table' {
 
   export = textTable
 }
-declare module 'next/dist/compiled/unistore' {
+declare module '@ornery/next.js/dist/compiled/unistore' {
   import m from 'unistore'
   export = m
 }
-declare module 'next/dist/compiled/web-vitals' {
+declare module '@ornery/next.js/dist/compiled/web-vitals' {
   import m from 'web-vitals'
   export = m
 }
 
-declare module 'next/dist/compiled/comment-json' {
+declare module '@ornery/next.js/dist/compiled/comment-json' {
   import m from 'comment-json'
   export = m
 }

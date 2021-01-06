@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs'
-import findUp from 'next/dist/compiled/find-up'
-import JSON5 from 'next/dist/compiled/json5'
+import findUp from '@ornery/next.js/dist/compiled/find-up'
+import JSON5 from '@ornery/next.js/dist/compiled/json5'
 import * as path from 'path'
 import { resolveRequest } from './resolve-request'
 

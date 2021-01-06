@@ -16,7 +16,7 @@ const customBabelLoader = babelLoader((babel) => {
     { type: 'plugin' }
   )
   const commonJsItem = babel.createConfigItem(
-    require('next/dist/compiled/babel/plugin-transform-modules-commonjs'),
+    require('@ornery/next.js/dist/compiled/babel/plugin-transform-modules-commonjs'),
     { type: 'plugin' }
   )
 

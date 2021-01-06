@@ -1,4 +1,4 @@
-import findUp from 'next/dist/compiled/find-up'
+import findUp from '@ornery/next.js/dist/compiled/find-up'
 import path from 'path'
 import {
   CONFIG_FILE,
@@ -37,14 +37,16 @@ type EventCliSessionStarted = {
 function hasBabelConfig(dir: string): boolean {
   try {
     const noopFile = path.join(dir, 'noop.js')
-    const res = require('next/dist/compiled/babel/core').loadPartialConfig({
-      cwd: dir,
-      filename: noopFile,
-      sourceFileName: noopFile,
-    }) as any
+    const res = require('@ornery/next.js/dist/compiled/babel/core').loadPartialConfig(
+      {
+        cwd: dir,
+        filename: noopFile,
+        sourceFileName: noopFile,
+      }
+    ) as any
     const isForTooling =
       res.options?.presets?.every(
-        (e: any) => e?.file?.request === 'next/babel'
+        (e: any) => e?.file?.request === '@ornery/next.js/babel'
       ) && res.options?.plugins?.length === 0
     return res.hasFilesystemConfig() && !isForTooling
   } catch {

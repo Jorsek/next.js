@@ -1,5 +1,5 @@
 import { IncomingMessage, ServerResponse } from 'http'
-import send from 'next/dist/compiled/send'
+import send from '@ornery/next.js/dist/compiled/send'
 
 export function serveStatic(
   req: IncomingMessage,

@@ -1,4 +1,4 @@
-import curry from 'next/dist/compiled/lodash.curry'
+import curry from '@ornery/next.js/dist/compiled/lodash.curry'
 import path from 'path'
 import webpack, { Configuration } from 'webpack'
 import MiniCssExtractPlugin from '../../../plugins/mini-css-extract-plugin'
@@ -176,7 +176,7 @@ export const css = curry(async function css(
         oneOf: [
           {
             test: [regexCssGlobal, regexSassGlobal],
-            use: require.resolve('next/dist/compiled/ignore-loader'),
+            use: require.resolve('@ornery/next.js/dist/compiled/ignore-loader'),
           },
         ],
       })
@@ -299,7 +299,9 @@ export const css = curry(async function css(
             use: {
               // `file-loader` always emits a URL reference, where `url-loader`
               // might inline the asset as a data URI
-              loader: require.resolve('next/dist/compiled/file-loader'),
+              loader: require.resolve(
+                '@ornery/next.js/dist/compiled/file-loader'
+              ),
               options: {
                 // Hash the file for immutable cacheability
                 name: 'static/media/[name].[hash].[ext]',

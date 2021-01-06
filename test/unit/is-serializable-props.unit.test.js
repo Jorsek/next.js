@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { isSerializableProps } from 'next/dist/lib/is-serializable-props'
+import { isSerializableProps } from '@ornery/next.js/dist/lib/is-serializable-props'
 
 describe('isSerializableProps', () => {
   it('handles null and undefined props', () => {

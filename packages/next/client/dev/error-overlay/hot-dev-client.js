@@ -27,7 +27,7 @@
 // https://github.com/facebook/create-react-app/blob/v3.4.1/packages/react-dev-utils/webpackHotDevClient.js
 
 import * as DevOverlay from '@next/react-dev-overlay/lib/client'
-import stripAnsi from 'next/dist/compiled/strip-ansi'
+import stripAnsi from '@ornery/next.js/dist/compiled/strip-ansi'
 import { getEventSourceWrapper } from './eventsource'
 import formatWebpackMessages from './format-webpack-messages'
 

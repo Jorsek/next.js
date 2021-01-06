@@ -1,7 +1,7 @@
 import { createHash } from 'crypto'
 import { tracer, traceAsyncFn } from '../../../../tracer'
 import transform from './transform'
-import cacache from 'next/dist/compiled/cacache'
+import cacache from '@ornery/next.js/dist/compiled/cacache'
 
 async function read(cacheDirectory, etag) {
   const cachedResult = await traceAsyncFn(

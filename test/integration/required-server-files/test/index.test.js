@@ -4,7 +4,7 @@ import http from 'http'
 import fs from 'fs-extra'
 import { join } from 'path'
 import cheerio from 'cheerio'
-import Server from 'next/dist/next-server/server/next-server'
+import Server from '@ornery/next.js/dist/next-server/server/next-server'
 import {
   fetchViaHTTP,
   findPort,

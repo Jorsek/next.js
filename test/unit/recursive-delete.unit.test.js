@@ -1,7 +1,7 @@
 /* eslint-env jest */
-import { recursiveDelete } from 'next/dist/lib/recursive-delete'
-import { recursiveReadDir } from 'next/dist/lib/recursive-readdir'
-import { recursiveCopy } from 'next/dist/lib/recursive-copy'
+import { recursiveDelete } from '@ornery/next.js/dist/lib/recursive-delete'
+import { recursiveReadDir } from '@ornery/next.js/dist/lib/recursive-readdir'
+import { recursiveCopy } from '@ornery/next.js/dist/lib/recursive-copy'
 import { join } from 'path'
 
 const resolveDataDir = join(__dirname, '..', 'isolated', '_resolvedata')

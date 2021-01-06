@@ -1,7 +1,7 @@
 {
   "babel": {
     "presets": [
-      "next/babel"
+      "@ornery/next.js/babel"
     ],
     "plugins": [
       "@babel/plugin-proposal-object-rest-spread"

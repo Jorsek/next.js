@@ -1,6 +1,6 @@
-import findUp from 'next/dist/compiled/find-up'
+import findUp from '@ornery/next.js/dist/compiled/find-up'
 import fs from 'fs'
-import JSON5 from 'next/dist/compiled/json5'
+import JSON5 from '@ornery/next.js/dist/compiled/json5'
 
 type RecursivePartial<T> = {
   [P in keyof T]?: RecursivePartial<T[P]>

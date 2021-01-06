@@ -3,11 +3,11 @@ import chalk from 'chalk'
 import crypto from 'crypto'
 import { promises, writeFileSync } from 'fs'
 import Worker from 'jest-worker'
-import devalue from 'next/dist/compiled/devalue'
-import escapeStringRegexp from 'next/dist/compiled/escape-string-regexp'
-import findUp from 'next/dist/compiled/find-up'
-import { nanoid } from 'next/dist/compiled/nanoid/index.cjs'
-import { pathToRegexp } from 'next/dist/compiled/path-to-regexp'
+import devalue from '@ornery/next.js/dist/compiled/devalue'
+import escapeStringRegexp from '@ornery/next.js/dist/compiled/escape-string-regexp'
+import findUp from '@ornery/next.js/dist/compiled/find-up'
+import { nanoid } from '@ornery/next.js/dist/compiled/nanoid/index.cjs'
+import { pathToRegexp } from '@ornery/next.js/dist/compiled/path-to-regexp'
 import path from 'path'
 import formatWebpackMessages from '../client/dev/error-overlay/format-webpack-messages'
 import {
@@ -636,30 +636,32 @@ export default async function build(
             if (workerResult.isNextImageImported) {
               isNextImageImported = true
             }
+            if (workerResult.hasStaticProps || workerResult.hasServerProps) {
+              if (workerResult.hasStaticProps) {
+                ssgPages.add(page)
+                isSsg = true
 
-            if (workerResult.hasStaticProps) {
-              ssgPages.add(page)
-              isSsg = true
-
-              if (
-                workerResult.prerenderRoutes &&
-                workerResult.encodedPrerenderRoutes
-              ) {
-                additionalSsgPaths.set(page, workerResult.prerenderRoutes)
-                additionalSsgPathsEncoded.set(
-                  page,
+                if (
+                  workerResult.prerenderRoutes &&
                   workerResult.encodedPrerenderRoutes
-                )
-                ssgPageRoutes = workerResult.prerenderRoutes
-              }
+                ) {
+                  additionalSsgPaths.set(page, workerResult.prerenderRoutes)
+                  additionalSsgPathsEncoded.set(
+                    page,
+                    workerResult.encodedPrerenderRoutes
+                  )
+                  ssgPageRoutes = workerResult.prerenderRoutes
+                }
 
-              if (workerResult.prerenderFallback === 'blocking') {
-                ssgBlockingFallbackPages.add(page)
-              } else if (workerResult.prerenderFallback === true) {
-                ssgStaticFallbackPages.add(page)
+                if (workerResult.prerenderFallback === 'blocking') {
+                  ssgBlockingFallbackPages.add(page)
+                } else if (workerResult.prerenderFallback === true) {
+                  ssgStaticFallbackPages.add(page)
+                }
               }
-            } else if (workerResult.hasServerProps) {
-              serverPropsPages.add(page)
+              if (workerResult.hasServerProps) {
+                serverPropsPages.add(page)
+              }
             } else if (
               workerResult.isStatic &&
               customAppGetInitialProps === false

@@ -1,6 +1,6 @@
 import path from 'path'
 import { promises, constants } from 'fs'
-import { Sema } from 'next/dist/compiled/async-sema'
+import { Sema } from '@ornery/next.js/dist/compiled/async-sema'
 
 const COPYFILE_EXCL = constants.COPYFILE_EXCL
 

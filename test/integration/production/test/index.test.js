@@ -17,7 +17,7 @@ import {
   PAGES_MANIFEST,
   REACT_LOADABLE_MANIFEST,
 } from 'next/constants'
-import { recursiveReadDir } from 'next/dist/lib/recursive-readdir'
+import { recursiveReadDir } from '@ornery/next.js/dist/lib/recursive-readdir'
 import fetch from 'node-fetch'
 import { join } from 'path'
 import dynamicImportTests from './dynamic'
@@ -787,7 +787,7 @@ describe('Production Usage', () => {
       browser = await webdriver(appPort, '/about')
       const version = await browser.eval('window.next.version')
       expect(version).toBeTruthy()
-      expect(version).toBe(require('next/package.json').version)
+      expect(version).toBe(require('@ornery/next.js/package.json').version)
     } finally {
       if (browser) {
         await browser.close()

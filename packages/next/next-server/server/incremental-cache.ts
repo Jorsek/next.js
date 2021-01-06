@@ -1,5 +1,5 @@
 import { promises, readFileSync } from 'fs'
-import LRUCache from 'next/dist/compiled/lru-cache'
+import LRUCache from '@ornery/next.js/dist/compiled/lru-cache'
 import path from 'path'
 import { PrerenderManifest } from '../../build'
 import { PRERENDER_MANIFEST } from '../lib/constants'

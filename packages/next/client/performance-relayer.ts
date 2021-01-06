@@ -6,7 +6,7 @@ import {
   getTTFB,
   Metric,
   ReportHandler,
-} from 'next/dist/compiled/web-vitals'
+} from '@ornery/next.js/dist/compiled/web-vitals'
 
 const initialHref = location.href
 let isRegistered = false

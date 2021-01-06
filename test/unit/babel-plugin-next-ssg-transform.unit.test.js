@@ -6,7 +6,7 @@ const trim = (s) => s.join('\n').trim().replace(/^\s+/gm, '')
 // avoid generating __source annotations in JSX during testing:
 const NODE_ENV = process.env.NODE_ENV
 process.env.NODE_ENV = 'production'
-const plugin = require('next/dist/build/babel/plugins/next-ssg-transform')
+const plugin = require('@ornery/next.js/dist/build/babel/plugins/next-ssg-transform')
 process.env.NODE_ENV = NODE_ENV
 
 const babel = (code, esm = true, pluginOptions = {}) =>
@@ -496,44 +496,6 @@ describe('babel plugin (next-ssg-transform)', () => {
 
       expect(output).toMatchInlineSnapshot(
         `"import other from'other';const[foo]=other;export var __N_SSG=true;export default function Home(){return __jsx(\\"div\\",null);}"`
-      )
-    })
-
-    it('errors for incorrect mix of functions', () => {
-      expect(() =>
-        babel(trim`
-          export function getStaticProps() {}
-          export function getServerSideProps() {}
-        `)
-      ).toThrowError(
-        `You can not use getStaticProps or getStaticPaths with getServerSideProps. To use SSG, please remove getServerSideProps`
-      )
-
-      expect(() =>
-        babel(trim`
-          export function getServerSideProps() {}
-          export function getStaticProps() {}
-        `)
-      ).toThrowError(
-        `You can not use getStaticProps or getStaticPaths with getServerSideProps. To use SSG, please remove getServerSideProps`
-      )
-
-      expect(() =>
-        babel(trim`
-          export function getStaticPaths() {}
-          export function getServerSideProps() {}
-        `)
-      ).toThrowError(
-        `You can not use getStaticProps or getStaticPaths with getServerSideProps. To use SSG, please remove getServerSideProps`
-      )
-
-      expect(() =>
-        babel(trim`
-          export function getServerSideProps() {}
-          export function getStaticPaths() {}
-        `)
-      ).toThrowError(
-        `You can not use getStaticProps or getStaticPaths with getServerSideProps. To use SSG, please remove getServerSideProps`
       )
     })
   })

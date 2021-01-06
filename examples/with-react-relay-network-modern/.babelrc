@@ -1,4 +1,4 @@
 {
-  "presets": ["next/babel"],
+  "presets": ["@ornery/next.js/babel"],
   "plugins": [["relay", { "artifactDirectory": "__generated__" }]]
 }

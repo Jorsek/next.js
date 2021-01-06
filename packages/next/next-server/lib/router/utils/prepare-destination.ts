@@ -1,7 +1,7 @@
 import { ParsedUrlQuery } from 'querystring'
 import { searchParamsToUrlQuery } from './querystring'
 import { parseRelativeUrl } from './parse-relative-url'
-import * as pathToRegexp from 'next/dist/compiled/path-to-regexp'
+import * as pathToRegexp from '@ornery/next.js/dist/compiled/path-to-regexp'
 
 type Params = { [param: string]: any }
 

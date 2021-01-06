@@ -3,7 +3,7 @@ const { devDependencies } = require('../package.json')
 module.exports = {
   presets: [
     [
-      'next/babel',
+      '@ornery/next.js/babel',
       {
         'preset-env': {
           targets: {

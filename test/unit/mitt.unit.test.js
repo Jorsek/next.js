@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import mitt from 'next/dist/next-server/lib/mitt'
+import mitt from '@ornery/next.js/dist/next-server/lib/mitt'
 
 describe('mitt', () => {
   describe('With listeners', () => {

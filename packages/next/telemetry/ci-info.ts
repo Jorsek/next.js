@@ -1,4 +1,4 @@
-import ciEnvironment from 'next/dist/compiled/ci-info'
+import ciEnvironment from '@ornery/next.js/dist/compiled/ci-info'
 
 const { isCI: _isCI, name: _name } = ciEnvironment
 

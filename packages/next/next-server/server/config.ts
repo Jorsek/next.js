@@ -1,5 +1,5 @@
 import chalk from 'chalk'
-import findUp from 'next/dist/compiled/find-up'
+import findUp from '@ornery/next.js/dist/compiled/find-up'
 import os from 'os'
 import { basename, extname } from 'path'
 import { execOnce } from '../lib/utils'

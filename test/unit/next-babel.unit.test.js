@@ -6,7 +6,9 @@ const trim = (s) => s.join('\n').trim().replace(/^\s+/gm, '')
 const babel = (code, esm = false, presetOptions = {}, filename = 'noop.js') =>
   transform(code, {
     filename,
-    presets: [[require('next/dist/build/babel/preset'), presetOptions]],
+    presets: [
+      [require('@ornery/next.js/dist/build/babel/preset'), presetOptions],
+    ],
     babelrc: false,
     configFile: false,
     sourceType: 'module',
@@ -18,7 +20,7 @@ const babel = (code, esm = false, presetOptions = {}, filename = 'noop.js') =>
     },
   }).code
 
-describe('next/babel', () => {
+describe('@ornery/next.js/babel', () => {
   describe('jsx-pragma', () => {
     it('should transform JSX to use a local identifier in modern mode', () => {
       const output = babel(`const a = () => <a href="/">home</a>;`, true)

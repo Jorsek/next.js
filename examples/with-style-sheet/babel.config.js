@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   presets: [
     [
-      'next/babel',
+      '@ornery/next.js/babel',
       {
         'preset-react': {
           pragma: 'createElement',

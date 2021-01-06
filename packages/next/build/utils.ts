@@ -1,10 +1,10 @@
 import '../next-server/server/node-polyfill-fetch'
 import chalk from 'chalk'
-import gzipSize from 'next/dist/compiled/gzip-size'
-import textTable from 'next/dist/compiled/text-table'
+import gzipSize from '@ornery/next.js/dist/compiled/gzip-size'
+import textTable from '@ornery/next.js/dist/compiled/text-table'
 import path from 'path'
 import { isValidElementType } from 'react-is'
-import stripAnsi from 'next/dist/compiled/strip-ansi'
+import stripAnsi from '@ornery/next.js/dist/compiled/strip-ansi'
 import {
   Redirect,
   Rewrite,
@@ -14,7 +14,6 @@ import {
 import {
   SSG_GET_INITIAL_PROPS_CONFLICT,
   SERVER_PROPS_GET_INIT_PROPS_CONFLICT,
-  SERVER_PROPS_SSG_CONFLICT,
 } from '../lib/constants'
 import prettyBytes from '../lib/pretty-bytes'
 import { recursiveReadDir } from '../lib/recursive-readdir'
@@ -777,9 +776,9 @@ export async function isPageStatic(
       throw new Error(SERVER_PROPS_GET_INIT_PROPS_CONFLICT)
     }
 
-    if (hasStaticProps && hasServerProps) {
-      throw new Error(SERVER_PROPS_SSG_CONFLICT)
-    }
+    // if (hasStaticProps && hasServerProps) {
+    //   throw new Error(SERVER_PROPS_SSG_CONFLICT)
+    // }
 
     const pageIsDynamic = isDynamicRoute(page)
     // A page cannot have static parameters if it is not a dynamic page.

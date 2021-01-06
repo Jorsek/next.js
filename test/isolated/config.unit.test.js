@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 import { join } from 'path'
-import loadConfig from 'next/dist/next-server/server/config'
+import loadConfig from '@ornery/next.js/dist/next-server/server/config'
 import { PHASE_DEVELOPMENT_SERVER } from 'next/constants'
 
 const pathToConfig = join(__dirname, '_resolvedata', 'without-function')

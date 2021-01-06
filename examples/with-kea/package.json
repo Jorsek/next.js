@@ -23,7 +23,7 @@
   },
   "babel": {
     "presets": [
-      "next/babel"
+      "@ornery/next.js/babel"
     ],
     "plugins": [
       [

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import chalk from 'chalk'
-import arg from 'next/dist/compiled/arg/index.js'
+import arg from '@ornery/next.js/dist/compiled/arg/index.js'
 import { printAndExit } from '../server/lib/utils'
 import { cliCommand } from '../bin/next'
 import { Telemetry } from '../telemetry/storage'

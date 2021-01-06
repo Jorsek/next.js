@@ -3,7 +3,7 @@
 import { remove } from 'fs-extra'
 import { findPort, killApp, launchApp, nextBuild } from 'next-test-utils'
 import webdriver from 'next-webdriver'
-import { recursiveReadDir } from 'next/dist/lib/recursive-readdir'
+import { recursiveReadDir } from '@ornery/next.js/dist/lib/recursive-readdir'
 import { join } from 'path'
 import { version } from 'webpack'
 

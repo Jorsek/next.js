@@ -1,7 +1,7 @@
 import chalk from 'chalk'
-import Conf from 'next/dist/compiled/conf'
+import Conf from '@ornery/next.js/dist/compiled/conf'
 import { BinaryLike, createHash, randomBytes } from 'crypto'
-import isDockerFunction from 'next/dist/compiled/is-docker'
+import isDockerFunction from '@ornery/next.js/dist/compiled/is-docker'
 import path from 'path'
 
 import { getAnonymousMeta } from './anonymous-meta'

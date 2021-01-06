@@ -1,4 +1,4 @@
-import * as pathToRegexp from 'next/dist/compiled/path-to-regexp'
+import * as pathToRegexp from '@ornery/next.js/dist/compiled/path-to-regexp'
 
 export { pathToRegexp }
 

@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { findConfig } from 'next/dist/lib/find-config'
+import { findConfig } from '@ornery/next.js/dist/lib/find-config'
 import { join } from 'path'
 
 const fixtureDir = join(__dirname, 'fixtures')

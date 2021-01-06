@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { addBasePath } from 'next/dist/next-server/lib/router/router'
+import { addBasePath } from '@ornery/next.js/dist/next-server/lib/router/router'
 
 describe('router addBasePath', () => {
   it('should add basePath correctly when no basePath', () => {
