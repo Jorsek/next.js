@@ -1,6 +1,6 @@
 {
   "name": "@ornery/next.js",
-  "version": "10.0.5-canary.9",
+  "version": "10.0.5-canary.11",
   "description": "The React Framework",
   "main": "./dist/server/next.js",
   "license": "MIT",

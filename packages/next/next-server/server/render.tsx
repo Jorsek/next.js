@@ -618,7 +618,7 @@ export async function renderToHTML(
       previewData = tryGetPreviewData(req, res, previewProps)
     }
 
-    if (isSSG && !isFallback) {
+    if ((!getServerSideProps || isBuildTimeSSG) && isSSG && !isFallback) {
       let data: UnwrapPromise<ReturnType<GetStaticProps>>
 
       try {
